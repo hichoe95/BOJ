@@ -18,7 +18,7 @@ struct POINT{
 	POINT(int x1, int y1): POINT(x1,y1,1,0){}
 	POINT(int x1, int y1, int p1, int q1): x(x1), y(y1), p(p1), q(q1){}
 	
-	bool operator <(const POINT& k){
+	bool operator <(const POINT& k)const{
 		if(1LL*k.p*q != 1LL*k.q*p) return 1LL * k.p * q < 1LL* k.q * p;
 		if(y!=k.y) return y<k.y;
 		return x<k.x;
